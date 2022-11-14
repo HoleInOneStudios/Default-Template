@@ -1,0 +1,192 @@
+{
+	"folders": [
+		{
+			"name": "All",
+			"path": ".."
+		},
+		{
+			"name": "Source",
+			"path": "../src"
+		},
+		{
+			"name": "Documentation",
+			"path": "../docs"
+		},
+		{
+			"name": "VSCode",
+			"path": "."
+		},
+		{
+			"name": "Github",
+			"path": "../.github"
+		},
+		{
+			"name": "Build",
+			"path": "../dist"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.github": true,
+			"**/.vscode": true,
+			"**/docs": true,
+			"**/src": true,
+			"**/node_modules": true,
+			"**/dist": true
+		},
+		"files.associations": {
+			"*.ejs": "html",
+			"**/bin": "javascript"
+		},
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true
+		},
+		"editor.quickSuggestions": {
+			"other": "on",
+			"comments": "on",
+			"strings": "on"
+		},
+		"material-icon-theme.files.associations": {
+			"www": "javascript",
+			"jest-puppeteer.config.js": "jest"
+		},
+		"material-icon-theme.folders.associations": {
+			"backgrounds": "images",
+			"hint_people": "images",
+			"reference": "images",
+			"tutorials": "video"
+		},
+		"better-comments.highlightPlainText": true,
+		"better-comments.multilineComments": true,
+		"better-comments.tags": [
+			{
+				"tag": "!",
+				"color": "#FF2D00",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "?",
+				"color": "#3498DB",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "//",
+				"color": "#474747",
+				"strikethrough": true,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "todo",
+				"color": "#FF8C00",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			},
+			{
+				"tag": "*",
+				"color": "#98C379",
+				"strikethrough": false,
+				"underline": false,
+				"backgroundColor": "transparent",
+				"bold": false,
+				"italic": false
+			}
+		],
+		"editor.wordWrap": "off",
+		"editor.fontFamily": "Operator Mono",
+		"editor.fontLigatures": true,
+		"editor.lineHeight": 24,
+		"npm.autoDetect": "on",
+		"terminal.integrated.fontFamily": "monospace",
+		"terminal.integrated.fontSize": 14,
+		"terminal.integrated.lineHeight": 1.5,
+		"terminal.integrated.letterSpacing": 0,
+		"editor.tokenColorCustomizations": {
+			"comments": "#eb1e1e",
+		},
+		"material-icon-theme.folders.color": "#90a4ae",
+		"workbench.colorCustomizations": {},
+		"workbench.preferredDarkColorTheme": "GitHub Dark",
+		"workbench.preferredLightColorTheme": "GitHub Light",
+		"cSpell.words": [
+			"msedge",
+			"SAMSAT"
+		],
+		"zenMode.centerLayout": false,
+		"zenMode.fullScreen": true,
+		"zenMode.hideActivityBar": false,
+		"zenMode.hideTabs": false,
+		"zenMode.hideStatusBar": false,
+		"zenMode.hideLineNumbers": false,
+		"zenMode.silentNotifications": true,
+		"zenMode.restore": true,
+		"jest.disabledWorkspaceFolders": [
+			"Documentation",
+			"Github",
+			"VSCode",
+			"All",
+			"Build"
+		],
+		"jest.jestCommandLine": "npm run test --"
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"type": "npm",
+				"script": "package",
+				"problemMatcher": [],
+				"label": "npm: package",
+				"detail": "@powershell Compress-Archive -Path dist/quiz-app.exe, dist/data/*-DestinationPath, dist/.env -DestinationPath dist/quiz-app.zip -Update"
+			},
+			{
+				"type": "npm",
+				"script": "build",
+				"group": "build",
+				"problemMatcher": [],
+				"label": "npm: build",
+				"detail": "pkg package.json && @powershell copy src/data/data.xlsx dist/data/data.xlsx"
+			},
+			{
+				"type": "npm",
+				"script": "test",
+				"group": "test",
+				"problemMatcher": [],
+				"label": "npm: test",
+				"detail": "jest --colors"
+			},
+			{
+				"type": "npm",
+				"script": "start",
+				"problemMatcher": [],
+				"label": "npm: start",
+				"detail": "node ./src/bin/www"
+			},
+			{
+				"type": "npm",
+				"script": "dev",
+				"problemMatcher": [],
+				"label": "npm: dev",
+				"detail": " nodemon ./src/bin/www"
+			}
+		]
+	},
+	"launch": {
+		"configurations": [],
+		"compounds": []
+	},
+}

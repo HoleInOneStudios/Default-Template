@@ -1,0 +1,5 @@
+feature:
+  - "(feature|enhancement)"
+
+bug:
+  - "(bug|issue)"
