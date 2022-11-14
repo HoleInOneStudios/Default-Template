@@ -19,10 +19,6 @@
 		{
 			"name": "Github",
 			"path": "../.github"
-		},
-		{
-			"name": "Build",
-			"path": "../dist"
 		}
 	],
 	"settings": {
@@ -31,13 +27,8 @@
 			"**/.vscode": true,
 			"**/docs": true,
 			"**/src": true,
-			"**/node_modules": true,
-			"**/dist": true
 		},
-		"files.associations": {
-			"*.ejs": "html",
-			"**/bin": "javascript"
-		},
+		"files.associations": {},
 		"editor.codeActionsOnSave": {
 			"source.fixAll": true,
 			"source.organizeImports": true
@@ -51,12 +42,7 @@
 			"www": "javascript",
 			"jest-puppeteer.config.js": "jest"
 		},
-		"material-icon-theme.folders.associations": {
-			"backgrounds": "images",
-			"hint_people": "images",
-			"reference": "images",
-			"tutorials": "video"
-		},
+		"material-icon-theme.folders.associations": {},
 		"better-comments.highlightPlainText": true,
 		"better-comments.multilineComments": true,
 		"better-comments.tags": [
@@ -139,51 +125,12 @@
 			"Github",
 			"VSCode",
 			"All",
-			"Build"
 		],
 		"jest.jestCommandLine": "npm run test --"
 	},
 	"tasks": {
 		"version": "2.0.0",
-		"tasks": [
-			{
-				"type": "npm",
-				"script": "package",
-				"problemMatcher": [],
-				"label": "npm: package",
-				"detail": "@powershell Compress-Archive -Path dist/quiz-app.exe, dist/data/*-DestinationPath, dist/.env -DestinationPath dist/quiz-app.zip -Update"
-			},
-			{
-				"type": "npm",
-				"script": "build",
-				"group": "build",
-				"problemMatcher": [],
-				"label": "npm: build",
-				"detail": "pkg package.json && @powershell copy src/data/data.xlsx dist/data/data.xlsx"
-			},
-			{
-				"type": "npm",
-				"script": "test",
-				"group": "test",
-				"problemMatcher": [],
-				"label": "npm: test",
-				"detail": "jest --colors"
-			},
-			{
-				"type": "npm",
-				"script": "start",
-				"problemMatcher": [],
-				"label": "npm: start",
-				"detail": "node ./src/bin/www"
-			},
-			{
-				"type": "npm",
-				"script": "dev",
-				"problemMatcher": [],
-				"label": "npm: dev",
-				"detail": " nodemon ./src/bin/www"
-			}
-		]
+		"tasks": []
 	},
 	"launch": {
 		"configurations": [],
