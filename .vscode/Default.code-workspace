@@ -29,20 +29,13 @@
 			"**/src": true,
 		},
 		"files.associations": {},
-		"editor.codeActionsOnSave": {
-			"source.fixAll": true,
-			"source.organizeImports": true
-		},
-		"editor.quickSuggestions": {
-			"other": "on",
-			"comments": "on",
-			"strings": "on"
-		},
+		"files.autoSave": "onFocusChange",
+		"files.trimTrailingWhitespace": true,
 		"material-icon-theme.files.associations": {
-			"www": "javascript",
-			"jest-puppeteer.config.js": "jest"
+			"*.txt": "smarty",
 		},
 		"material-icon-theme.folders.associations": {},
+		"material-icon-theme.folders.color": "#90a4ae",
 		"better-comments.highlightPlainText": true,
 		"better-comments.multilineComments": true,
 		"better-comments.tags": [
@@ -92,22 +85,16 @@
 				"italic": false
 			}
 		],
-		"editor.wordWrap": "off",
-		"editor.fontFamily": "Operator Mono",
-		"editor.fontLigatures": true,
-		"editor.lineHeight": 24,
 		"npm.autoDetect": "on",
 		"terminal.integrated.fontFamily": "monospace",
 		"terminal.integrated.fontSize": 14,
 		"terminal.integrated.lineHeight": 1.5,
 		"terminal.integrated.letterSpacing": 0,
-		"editor.tokenColorCustomizations": {
-			"comments": "#eb1e1e",
-		},
-		"material-icon-theme.folders.color": "#90a4ae",
 		"workbench.colorCustomizations": {},
 		"workbench.preferredDarkColorTheme": "GitHub Dark",
 		"workbench.preferredLightColorTheme": "GitHub Light",
+		"workbench.list.smoothScrolling": true,
+		"workbench.startupEditor": "none",
 		"cSpell.words": [
 			"msedge",
 			"SAMSAT"
@@ -126,7 +113,29 @@
 			"VSCode",
 			"All",
 		],
-		"jest.jestCommandLine": "npm run test --"
+		"jest.jestCommandLine": "npm run test --",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"diffEditor.codeLens": true,
+		"editor.suggest.preview": true,
+		"editor.suggest.shareSuggestSelections": true,
+		"editor.suggest.showStatusBar": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true
+		},
+		"editor.quickSuggestions": {
+			"other": "on",
+			"comments": "on",
+			"strings": "on"
+		},
+		"editor.wordWrap": "off",
+		"editor.fontFamily": "Operator Mono",
+		"editor.fontLigatures": true,
+		"editor.lineHeight": 24,
+		"editor.tokenColorCustomizations": {
+			"comments": "#eb1e1e",
+		},
 	},
 	"tasks": {
 		"version": "2.0.0",
